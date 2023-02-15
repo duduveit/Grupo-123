@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 <h1 style="background-color: lightgreen;" align="center">Projeto Computação Paralela</h1>
 <h3 align="center">🚀 Projetos realizados no quinto semestre na disciplina de Computação Paralela</h3>
 
 
-<table border="4", style="width:100%">
+<table border="4", style="width:100%", align="center">
     <tr>
         <th>Nome</th>
         <th>TIA</th>
