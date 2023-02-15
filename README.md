@@ -32,6 +32,7 @@
 <h2 align="center">Instruções detalhadas para a execução do programa</h2>
 
 <h3> 1. Como compilar o programa</h3>
+
 ```
 gcc -o lab01 lab01.c
 ```
