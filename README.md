@@ -11,6 +11,7 @@
 gcc -o hello hello.c
 ```
 <li>Como executar o programa</li>
+
 ```
 hello.exe
 ```
