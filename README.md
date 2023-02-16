@@ -34,13 +34,13 @@
 <h3> 1. Como compilar o programa</h3>
 
 ```
-gcc -o lab01 lab01.c
+gcc -o hello hello.c
 ```
 
 <h3> 2. Como executar o programa</h3>
 
 ```
-lab01.exe
+hello.exe
 ```
 
 <h3> 3. Como comprovar que os resultados propostos foram alcançados</h3>
