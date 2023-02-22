@@ -8,7 +8,7 @@
 <h3> 1. Como compilar o programa</h3>
 
 ```
-gcc -o hello hello.c
+gcc hello.c -o hello
 ```
 
 <h3> 2. Como executar o programa</h3>
