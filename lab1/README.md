@@ -14,7 +14,7 @@ gcc hello.c -o hello
 <h3> 2. Como executar o programa</h3>
 
 ```
-hello.exe
+hello
 ```
 
 <h3> 3. Como comprovar que os resultados propostos foram alcançados</h3>
