@@ -19,7 +19,7 @@ gcc main.c -o main
 <h3> 3. Como comprovar que os resultados propostos foram alcançados</h3>
 
 ```
-A execução do programa deve imprimir o resultado dos cálculos realizados no processos pai efilho. O valor é 12.
+A execução do programa deve imprimir o resultado dos cálculos realizados no processos pai e filho. O valor é 12.
 ```
 
 </body>
