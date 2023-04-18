@@ -54,6 +54,13 @@ A execução do programa deve imprimir a matriz A, matrizB e o resultado da mult
         <td>0,009s</td>
         <td>0,652s</td>
     </tr>
+    <tr>
+        <td>Speedup</td>
+        <td>0,5</td>
+        <td>1</td>
+        <td>1,1111</td>
+        <td>1,0399</td>
+    </tr>
 </table>
 
 </body>
