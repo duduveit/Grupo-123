@@ -31,37 +31,8 @@ time ./paralela linha coluna thread
 ```
 A execução do programa deve imprimir a matriz A, matrizB e o resultado da multiplicação de ambas matrizes. 
 ```
-
-<table border="4", style="width:100%", align="center">
-    <tr>
-        <th>N linhas x colunas</th>
-        <th>3x3</th>
-        <th>10x10</th>
-        <th>100x100</th>
-        <th>1000x1000</th>
-    </tr>
-    <tr>
-        <td>1 thread</td>
-        <td>0,001s</td>
-        <td>0,003s</td>
-        <td>0,010s</td>
-        <td>0,678s</td>
-    </tr>
-    <tr>
-        <td>N threads</td>
-        <td>0,002s</td>
-        <td>0,003s</td>
-        <td>0,009s</td>
-        <td>0,652s</td>
-    </tr>
-    <tr>
-        <td>Speedup</td>
-        <td>0,5</td>
-        <td>1</td>
-        <td>1,1111</td>
-        <td>1,0399</td>
-    </tr>
-</table>
+    
+![image](https://user-images.githubusercontent.com/84543379/232861796-c84891cb-acb6-4be9-9818-42cea0e46775.png)
 
 </body>
 </html>
