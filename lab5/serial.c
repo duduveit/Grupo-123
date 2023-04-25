@@ -11,8 +11,9 @@ double f(double x){
 int main(int argc, char* argv[]){
         double a, b;
         int n;
-        printf("Enter a, b and n\n");
-        scanf("%lf %lf %d", &a, &b, &n);
+	a = strtol(argv[1], NULL, 10);
+        b = strtol(argv[2], NULL, 10);
+	n = strtol(argv[3], NULL, 10);
         double result = Trap(a, b, n);
         printf("With n = %d trapezoids, our estimate\n", n);
         printf("of the integral from %f to %f = %.14e\n", a , b, result);
