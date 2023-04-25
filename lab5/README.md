@@ -35,7 +35,8 @@ Usando a = 0, b = 1 e n = 1000000000, a execução do programa deverá ter essa 
   
 ![image](https://user-images.githubusercontent.com/84543379/234399136-64bc034d-98e7-4fe2-9ecd-4a5f88345663.png)
   
-![image](https://user-images.githubusercontent.com/84543379/232861796-c84891cb-acb6-4be9-9818-42cea0e46775.png)
+![image](https://user-images.githubusercontent.com/83614505/234399296-62aa9890-9f9e-41a2-ab95-c157535b6007.png)
+
 
 </body>
 </html>
