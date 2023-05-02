@@ -29,8 +29,8 @@ sudo apt-get install libmpfr-dev
 ```
 
 ```
-gfortran -o serial serial.f90
-gcc  serial2.c -o  serialc 
+gfortran -o serial_fortran serial.f90
+gcc  serial2.c -o  serial2 
 gcc  serial_prec.c -o serial_prec -lgmp
 ```
 
@@ -49,6 +49,9 @@ gcc  serial_prec.c -o serial_prec -lgmp
 ```
 O resultado imprime o valor da constante de euler
 ```
+![image](https://user-images.githubusercontent.com/83614505/235788788-052fd2a3-447c-45b2-93a4-b81a8f742254.png)
+![image](https://user-images.githubusercontent.com/83614505/235788827-793c8d9b-174a-4071-9d8a-acee69dd9cfd.png)
+![image](https://user-images.githubusercontent.com/83614505/235788866-58291fad-9648-41e3-8422-3dac95fe9666.png)
 
 
 
