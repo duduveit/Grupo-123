@@ -7,7 +7,7 @@ program calcular_e
     e = e + 1.0 / fat(i)
   end do
 
-  print *, "O valor de e eh = ", e
+ write(*,*)  "O valor de e eh = ", e
 
 contains
 
