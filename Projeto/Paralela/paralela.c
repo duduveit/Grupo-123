@@ -1,50 +1,75 @@
+#include <gmp.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
 
-void Euler(int n, long double* global_result_p);
-long double fatorial(int n);
+// Resultado global do euler
+mpf_t global_result;
 
-int main(int agrc , char*argv[]){
-    long double global_result = 1;
-    int n = 20;
-    int thread_count;
+// Número de iterações
+int iteracoes;
 
-    thread_count = strtol(argv[1],NULL, 10);
+void Euler();
 
-#pragma omp parallel num_threads(thread_count)
-    Euler(n, &global_result);
-    printf("Euler=%0.62Lf\n", global_result);
+int main(int argc , char*argv[]) {
+  if (argc <= 1){
+    printf ("Rode o arquivo: %s <numero de iteracoes> \n", argv[0]);
     return 0;
+  }
+  
+  iteracoes = atoi(argv[1]);
+  int thread_count = 2;
+    
+  mpf_init2(global_result, 100000U);
+  mpf_set_ui(global_result, 1);
+  
+# pragma omp parallel num_threads(thread_count)
+
+  Euler();
+  gmp_printf("%.10000Ff\n", global_result);
+  
+  mpf_clear(global_result);
+  return 0;
 }
 
-void Euler(int n,long double* global_result_p){
-    long double soma_local = 0;
+void Euler(){
+  int i;
 
-    int my_rank = omp_get_thread_num();
-    int thread_count = omp_get_num_threads();
+  mpf_t soma_local, divisao, fatorial;
+  
+  mpf_init2(soma_local, 1000000U);
+  mpf_set_ui(soma_local, 0);
 
-    int div = n/thread_count;
-    int inicio = my_rank * div + 1;
-    int fim;
+  mpf_init2(divisao, 1000000U);
+  mpf_set_ui(divisao, 0);
 
-    if(my_rank == thread_count-1){
-        fim = n;
-    } else {
-        fim = inicio + div - 1;
+  mpf_init2(fatorial, 1000000U);
+  mpf_set_ui(fatorial,1);
+  
+  int my_rank = omp_get_thread_num();
+  int thread_count = omp_get_num_threads();
+
+  int div = iteracoes/thread_count;
+  int inicio = (my_rank * div) + 1;
+  int fim = (my_rank+1) * div;
+
+  if(my_rank >= 1){
+    i = 1;
+    while (i<=inicio-1){
+      mpf_mul_ui(fatorial, fatorial,i);
+      i++;
     }
+  }
+  for (i = inicio; i<=fim; i++){;
+    mpf_mul_ui(fatorial, fatorial,i);
+    mpf_ui_div(divisao, 1, fatorial);
+    mpf_add(soma_local, soma_local, divisao);
+  }
+ 
+ # pragma omp critical
+  mpf_add(global_result, global_result, soma_local);
 
-    for (int a = inicio; a<=fim; a++) 
-        soma_local += 1/fatorial(a);
-
-#pragma omp critical
-    *global_result_p += soma_local;
-}
-
-long double fatorial(int n){
-    if(n==0){
-        return 1;
-    } else{
-        return n*fatorial(n-1);
-    } 
+  mpf_clear(soma_local);
+  mpf_clear(divisao);
+  mpf_clear(fatorial);
 }
