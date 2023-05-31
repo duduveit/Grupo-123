@@ -7,7 +7,7 @@
 <h3> 1. Um código foi criado utilizando técnicas de paralelização</h3>
 <h4> 
    <div> 
-     <ul> 1. paralela.c -> Código em C que calcula o número de euler com 62 casas decimais, com 18 casas precisas
+     <ul> 1. paralela.c -> Código em C que calcula o número de euler com 10000 casas precisas
    </div>
 </h4>
 
@@ -24,13 +24,13 @@ sudo apt-get install libomp-dev
 ```
 
 ```
-gcc −g −Wall −fopenmp −o paralela paralela.c
+gcc −o paralela paralela.c -lgmp -fopenmp
 ```
 
 <h3> 2. Como executar o programa</h3>
 
 ```
-./paralela X    // Sendo X o número de threads
+./paralela X    // Sendo X o número de iterações
 ```
 
 <h3> 3. Como comprovar que os resultados propostos foram alcançados</h3>
@@ -38,8 +38,8 @@ gcc −g −Wall −fopenmp −o paralela paralela.c
 ```
 O resultado imprime o valor da constante de euler
 ```
-![image](https://user-images.githubusercontent.com/83614505/236920897-e8a73fdf-7260-4148-bd2e-0a824691ade7.png)
-![image](https://user-images.githubusercontent.com/83614505/236920945-4cc38eac-2e3f-4f92-b97f-29e1935c2de7.png)
+![image](https://github.com/duduveit/Grupo-123/assets/84543379/4e833c9e-322b-4797-b31a-17e7f58791f9)
+![image](https://github.com/duduveit/Grupo-123/assets/84543379/9c657b7f-ff55-4646-863a-bbe44c82ee76)
 
 
 
